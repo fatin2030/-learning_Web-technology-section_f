@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION = array();
-session_destroy();
-header("Location: ../view/login.php");
-exit;
+    session_destroy();
+   // unlink($_SESSION['flag']);
+    setcookie('flag', 'true', time()-10, '../view/login.html');
+    header('location: ../view/login.html');
 ?>
