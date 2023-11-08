@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Profile Picture</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Profile Picture</legend>
+            User Id: <input type="text" id="userId" /> <br>
+            Picture <input type="file" id="picture" /> <br>
+
+        </fieldset>
+        <button onclick="validation()">Submit</button>
+
+        <script>
+            function validation() {
+                let userId = document.getElementById("userId").value;
+                let picture = document.getElementById("picture").value;
+
+                if (userId == "" || userId <= 0) {
+                    alert("User Id cannot be empty and has to be a positive number");
+                    return;
+                }
+
+                if (picture == "") {
+                    alert("Picture cannot be empty");
+                    return;
+                }
+
+                alert("Form submitted successfully");
+            }
+        </script>
+    </body>
+</html>
