@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>Degree</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Degree</legend>
+            <input type="checkbox" id="ssc" />SSC
+            <input type="checkbox" id="hsc" />HSC
+            <input type="checkbox" id="bsc" />BSC
+        </fieldset>
+        <button onclick="validation()">Submit</button>
+
+        <script>
+            function validation() {
+                let sscCheckbox = document.getElementById("ssc");
+                let hscCheckbox = document.getElementById("hsc");
+                let bscCheckbox = document.getElementById("bsc");
+
+                if (!sscCheckbox.checked && !hscCheckbox.checked && !bscCheckbox.checked) {
+                    alert("Please select at least one degree");
+                    return;
+                }
+                alert("Form submitted successfully");
+            }
+        </script>
+    </body>
+</html>
